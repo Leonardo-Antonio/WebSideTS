@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact</title>
+    <%- include("../shared/_header") %>
+</head>
+<body>
+    <%- include("../shared/_navbar") %>
+    <div class="container">
+        <h1 class="text-center my-4">Comment</h1>
+        <form action="/comment" method="post" class="row justify-content-center mx-2">
+            <div class="card col-md-5">
+                <div class="card-body">
+                    <div class="form-floating mb-3">
+                        <input type="text" name="name"
+                               required
+                               class="form-control" id="floatingInput" placeholder="Leonardo Antonio">
+                        <label for="floatingInput">Enter your name</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea name="comment"
+                                  required
+                                class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 180px"></textarea>
+                        <label for="floatingTextarea2">Comments</label>
+                    </div>
+                </div>
+                <button class="btn btn-primary mb-2">
+                    Send
+                </button>
+            </div>
+        </form>
+    </div>
+    <%- include("../shared/_footer") %>
+</body>
+</html>
