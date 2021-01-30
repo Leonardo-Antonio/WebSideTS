@@ -29,7 +29,7 @@ class App {
     setting() {
         this.app.set("port", this.port || process.env.PORT);
         this.app.set("views", path_1.default.join(__dirname, "views"));
-        this.app.set("view engine", "ejs");
+        this.app.set("view engine", "pug");
     }
     middlewares() {
         this.app.use(morgan_1.default("dev"));

@@ -12,6 +12,8 @@
 - dependencies
 ```shell
     npm i express ejs morgan mysql2
+    -- o 
+    npm install pug --save
 ```
 
 - dev dependencies

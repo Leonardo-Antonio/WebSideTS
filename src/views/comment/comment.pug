@@ -1,0 +1,18 @@
+extends ../shared/_layout
+append title
+    - NPage = "Comment"
+
+block body
+    div.container
+        h1.text-center.my-4 Comment
+        form(action="/comment", method="post").row.justify-content-center.mx-2
+            div.card.col-md-5
+                div.card-body
+                    div.form-floating.mb-3
+                        input(type="text", name="name", required, placeholder="Leonardo").form-control#floatingInput
+                        label(for="floatingInput") Enter your name
+
+                    div.form-floating
+                        textarea(name="comment", required, placeholder="Leonardo", style="height: 180px").form-control#floatingTextarea2
+                        label(for="floatingInput") Enter your comment
+                button(type="submit").btn.btn-primary.mb-2 Send

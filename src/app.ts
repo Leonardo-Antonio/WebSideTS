@@ -17,7 +17,7 @@ export class App {
     private setting(){
         this.app.set("port", this.port || process.env.PORT)
         this.app.set("views", path.join(__dirname, "views"))
-        this.app.set("view engine", "ejs")
+        this.app.set("view engine", "pug")
     }
 
     private middlewares(){

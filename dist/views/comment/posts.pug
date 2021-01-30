@@ -1,0 +1,14 @@
+extends ../shared/_layout
+append title
+    - NPage = "Posts"
+
+block body
+    div.container
+        div.row.justify-content-center.my-4
+            each post, key in posts
+                div.col-md-3.mx-2.my-2
+                    div.card
+                        div.card-header= post.name
+                        div.card-body
+                            p= post.comment
+                        div.card-footer= post.created_at
