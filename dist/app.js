@@ -18,6 +18,7 @@ const morgan_1 = __importDefault(require("morgan"));
 const path_1 = __importDefault(require("path"));
 const home_router_1 = __importDefault(require("./router/home.router"));
 const comment_router_1 = __importDefault(require("./router/comment.router"));
+const _404_router_1 = __importDefault(require("./router/404.router"));
 class App {
     constructor(port) {
         this.port = port;
@@ -39,6 +40,7 @@ class App {
         this.app.use(express_1.default.static(path_1.default.join(__dirname, "public")));
         this.app.use(home_router_1.default);
         this.app.use("/comment", comment_router_1.default);
+        this.app.use(_404_router_1.default);
     }
     Listen() {
         return __awaiter(this, void 0, void 0, function* () {
