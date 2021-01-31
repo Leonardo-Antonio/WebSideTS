@@ -3,6 +3,7 @@ import morgan from "morgan";
 import path from "path";
 import HomeRouter from "./router/home.router"
 import CommentRouter from "./router/comment.router"
+import NotFoundRouter from "./router/404.router"
 
 export class App {
     private app: Application
@@ -29,6 +30,7 @@ export class App {
         this.app.use(express.static(path.join(__dirname, "public")))
         this.app.use(HomeRouter)
         this.app.use("/comment", CommentRouter)
+        this.app.use(NotFoundRouter)
     }
 
     public async Listen(){
